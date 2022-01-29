@@ -6,11 +6,11 @@ import {Navbar} from "../../components/navbar/Navbar"
 import List from "../../components/list/list"
 
 
-function Home() {
+function Home({type}) {
     return (
         <div className="home">
            <Navbar/>
-           <Featured/>
+           <Featured type={type}/>
            <List/>
            <List/>
            <List/>
