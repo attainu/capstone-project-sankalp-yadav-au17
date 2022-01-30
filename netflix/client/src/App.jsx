@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom";
+import {Routes,Switch,Route,Redirect} from "react-router-dom";
 
 import Home from './pages/home/Home';
 import Register from './pages/register/Register';
@@ -7,8 +7,8 @@ import Login from './pages/login/login';
 
 function App() {
   return (
-    <Router>
-      <Switch>
+    <Routes>
+      
         <Route exact path="/">
           {user ? <Home /> : <Redirect to="/register" />}
         </Route>
@@ -29,8 +29,8 @@ function App() {
             </Route>
           </>
         )}
-      </Switch>
-    </Router>
+      
+    </Routes>
   );
 }
 
