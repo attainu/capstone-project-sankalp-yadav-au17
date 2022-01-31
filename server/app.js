@@ -22,6 +22,11 @@ app.get('/signup', (req, res) => {
     res.send(`Hello Registration world from the server`);
 });
 
+const buildFolderPath = resolve(__dirname, '../client/build') 
+app.get("*", (req, res) => {
+    res.sendFile(`${buildFolderPath}/index.html`)
+})
+
 app.listen(PORT, () => {
     console.log(`server is runnig at port no ${PORT}`);
 })
